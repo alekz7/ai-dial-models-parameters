@@ -8,12 +8,10 @@ from task.app.main import run
 #  User massage: Explain the key components of a Large Language Model architecture
 
 run(
-    deployment_name='gpt-4o',
-    print_only_content=True,
-    # TODO:
-    #  1. Use `stop` parameter with value "\n\n"
-    #  2. Use `stop` parameter with values ["**Embedding Layer**", "**Transformer Blocks**", "**Training**"]
-    #  3. Optional: Set `print_only_content` as False to see the full JSON and what is the `finish_reason`
+    deployment_name='gemini-2.5-pro',
+    print_request=False, # Switch to False if you do not want to see the request in console
+    print_only_content=True, # Switch to True if you want to see only content from response
+    stop=["**Embedding Layer**", "**Transformer Blocks**", "**Training**", "language", "Language"]
 )
 
 # With `stop` parameter we can stop content generation. It can be used for some policies/guardrails. For instance,

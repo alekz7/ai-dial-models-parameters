@@ -6,9 +6,8 @@ from task.app.main import run
 #  User massage: Describe the sound that the color purple makes when it's angry
 
 run(
-    deployment_name='gpt-4o',
-    print_only_content=True,
-    # TODO:
-    #  Use `temperature` parameter with value in range from 0.0 to 1.0!
-    #  (Optional) Use `temperature` parameter with value 2.1 and check what happens
+    deployment_name='gemini-2.5-pro',
+    #print_request=False, # Switch to False if you do not want to see the request in console
+    #print_only_content=True, # Switch to True if you want to see only content from response
+    temperature=2.0,
 )

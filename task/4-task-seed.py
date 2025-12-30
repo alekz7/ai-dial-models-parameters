@@ -9,11 +9,11 @@ from task.app.main import run
 #  User massage: Name a random animal
 
 run(
-    deployment_name='gpt-4o',
-    # TODO:
-    #  1. Use `seed` parameter with value 42 (or whatever you want)
-    #  2. Use `n` parameter with value 5
-)
+    deployment_name='gemini-2.5-pro',
+    print_request=False, # Switch to False if you do not want to see the request in console
+    print_only_content=True, # Switch to True if you want to see only content from response
+    seed=42
+)    
 
 # Check the content in choices. The expected result is that in almost all choices the result will be the same.
 # If you restart the app and retry, it should be mostly the same.

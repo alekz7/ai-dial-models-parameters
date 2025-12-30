@@ -9,11 +9,12 @@ from task.app.main import run
 #  User massage: Explain the water cycle in simple terms for children
 
 run(
-    deployment_name='gpt-4o',
-    print_only_content=True,
-    # TODO:
-    #  Use `frequency_penalty` parameter with different range (-2.0 to 2.0).
-)
+    deployment_name='gemini-2.5-pro',
+    print_request=False, # Switch to False if you do not want to see the request in console
+    print_only_content=True, # Switch to True if you want to see only content from response
+    frequency_penalty=2.0,
+)    
+    
 
 # Pay attention that when we set for `gpt-4o` frequency_penalty as -2.0 - the request is running too long,
 # and in the result we can get something strange (such as repetitive words in the end).

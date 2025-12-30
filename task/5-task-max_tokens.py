@@ -5,10 +5,11 @@ from task.app.main import run
 #  User massage: What is token when we are working with LLM?
 
 run(
-    deployment_name='gpt-4o',
-    # TODO:
-    #  Use `max_tokens` parameter with value 10
-)
+    deployment_name='gemini-2.5-pro',
+    print_request=False, # Switch to False if you do not want to see the request in console
+    print_only_content=True, # Switch to True if you want to see only content from response
+    max_tokens=5
+)    
 
 # Previously, we have seen that the `finish_reason` in choice was `stop`, but now it is `length`, and if you check the
 # `content,` it is clearly unfinished.
